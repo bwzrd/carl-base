@@ -1,0 +1,28 @@
+name: carl
+version: 0.1.0
+description: "Carl — pocket turf professional. Operations agent for golf course maintenance crews: job board, fuel/equipment/service logs, crew roster, scheduling. Talks over Telegram, stores everything in Airtable."
+hermes_requires: ">=0.14.0"
+author: "Brendan Wise"
+license: "Proprietary"
+
+# Model access is NOT an env var — users log in with OAuth during setup:
+#   carl setup --portal        (Nous Portal — recommended)
+#   carl model → Anthropic OAuth  (Claude Max with extra usage credits)
+env_requires:
+  - name: TELEGRAM_BOT_TOKEN
+    description: "Telegram bot token from @BotFather — Carl's chat channel for the crew"
+    required: true
+  - name: AIRTABLE_API_KEY
+    description: "Airtable personal access token with data.records:read/write + schema.bases:read scopes on your course base"
+    required: true
+  - name: AIRTABLE_BASE_ID
+    description: "Your course's Airtable base ID (app…) — duplicate the Carl template base to get one"
+    required: true
+  - name: COURSE_NAME
+    description: "Display name of the golf course (e.g. Pine Ridge Golf Club)"
+    required: false
+    default: ""
+  - name: WEATHER_LOCATION
+    description: "Course location for weather context (e.g. Uxbridge, Ontario, Canada)"
+    required: false
+    default: ""

@@ -1,0 +1,7 @@
+{
+  "name": "morning-job-board",
+  "schedule": "0 6 * * *",
+  "prompt": "Morning job board push. Read today's Job Board rows (Assigned Date = today) from the course Airtable base, group by assigned staff with their equipment, and post a short crew summary to the operator on Telegram. Flag any unassigned jobs and anything weather-sensitive given today's forecast.",
+  "skills": ["job-board"],
+  "deliver": "telegram"
+}

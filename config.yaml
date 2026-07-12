@@ -1,0 +1,12 @@
+# carl-base distribution defaults.
+# Model/provider is intentionally NOT pinned here — it's chosen at setup:
+#   carl setup --portal          (Nous Portal OAuth, recommended)
+#   carl model                   (pick Anthropic OAuth / any provider)
+# On `carl profile update` this file is preserved if the user edited it.
+
+# Airtable MCP server — Carl's system of record.
+# Reads AIRTABLE_API_KEY from the profile .env (never hardcode it here).
+mcp_servers:
+  airtable:
+    command: "npx"
+    args: ["-y", "airtable-mcp-server"]

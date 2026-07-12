@@ -1,0 +1,23 @@
+# Credentials & secrets — NEVER commit
+auth.json
+.env
+.env.EXAMPLE
+
+# Runtime databases & state
+state.db*
+hermes_state.db
+response_store.db*
+
+# User data — NEVER commit
+memories/
+sessions/
+logs/
+plans/
+workspace/
+home/
+
+# Caches & generated artifacts
+image_cache/
+audio_cache/
+document_cache/
+cache/

@@ -1,0 +1,7 @@
+{
+  "name": "eod-check",
+  "schedule": "0 17 * * *",
+  "prompt": "End-of-day check. List today's Job Board rows that are still incomplete, flag them to the superintendent on Telegram, and ask whether to roll them to tomorrow or drop them. Include a one-line count of what got done today.",
+  "skills": ["job-board"],
+  "deliver": "telegram"
+}
