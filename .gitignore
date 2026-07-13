@@ -21,3 +21,4 @@ image_cache/
 audio_cache/
 document_cache/
 cache/
+__pycache__/
