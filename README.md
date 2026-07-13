@@ -41,10 +41,16 @@ Claude Max plan with extra usage credits instead? Run `carl model` and pick
 cp ~/.hermes/profiles/carl/.env.EXAMPLE ~/.hermes/profiles/carl/.env
 # then edit .env:
 #   TELEGRAM_BOT_TOKEN  — from @BotFather
-#   AIRTABLE_API_KEY    — PAT with data.records read/write + schema read
-#   AIRTABLE_BASE_ID    — your copy of the Carl template base (app…)
+#   AIRTABLE_API_KEY    — PAT with data.records read/write + schema.bases read/write
+#   AIRTABLE_BASE_ID    — an empty base you created in Airtable (app…)
 #   COURSE_NAME / WEATHER_LOCATION — optional
 ```
+
+Create the base in Airtable with "Start from scratch", then let Carl build it:
+tell him **"set up my base"** (or run the bundled script directly:
+`python ~/.hermes/profiles/carl/skills/turf/base-setup/scripts/provision_base.py --base appXXXX`).
+He creates all 13 tables — Job Board, Employees, Equipment, fuel/service/spray
+logs, SOPs — with the links, formulas, and starter task types.
 
 **5. Start Carl:**
 
@@ -70,7 +76,7 @@ carl cron create "0 17 * * *" "$(python -c "import json;print(json.load(open('cr
 distribution.yaml   manifest + required env vars
 SOUL.md             Carl's personality and operating rules
 config.yaml         Airtable MCP server (mcp_servers)
-skills/turf/        job-board · field-logs · crew
+skills/turf/        job-board · field-logs · crew · base-setup (+ provisioning script)
 cron/               morning board push · end-of-day check (enable manually)
 ```
 

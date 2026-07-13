@@ -13,10 +13,10 @@ env_requires:
     description: "Telegram bot token from @BotFather - Carl's chat channel for the crew"
     required: true
   - name: AIRTABLE_API_KEY
-    description: "Airtable personal access token with data.records:read/write + schema.bases:read scopes on your course base"
+    description: "Airtable personal access token with data.records:read/write + schema.bases:read/write scopes on your course base"
     required: true
   - name: AIRTABLE_BASE_ID
-    description: "Your course's Airtable base ID (appXXXX) - duplicate the Carl template base to get one"
+    description: "Your course's Airtable base ID (appXXXX) - create an empty base, then tell Carl 'set up my base'"
     required: true
   - name: COURSE_NAME
     description: "Display name of the golf course (e.g. Pine Ridge Golf Club)"
