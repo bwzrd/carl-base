@@ -22,7 +22,7 @@ iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 **2. Install Carl:**
 
 ```bash
-hermes profile install github.com/OWNER/carl-base --name carl --alias -y
+hermes profile install github.com/bwzrd/carl-base --name carl --alias -y
 ```
 
 **3. Log in — no API keys needed:**
