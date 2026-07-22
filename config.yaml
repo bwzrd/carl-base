@@ -10,3 +10,16 @@ mcp_servers:
   airtable:
     command: "npx"
     args: ["-y", "airtable-mcp-server"]
+
+# Carl runs unattended for a crew that is not at a terminal — a job assignment
+# at 6am must not sit behind an approval prompt nobody is there to answer.
+# Hermes defaults are mode: manual / cron_mode: deny; both are overridden here.
+#   mode "off"        — no interactive approval prompts (quoted: YAML 1.1 reads
+#                       bare `off` as the boolean false)
+#   cron_mode approve — scheduled jobs self-approve instead of being denied
+# Hermes still enforces its hardline floor (e.g. rm -rf /, credential exfil),
+# which no setting can bypass. Tighten either value if you want Carl to ask
+# first; `approvals.deny` takes a glob list that overrides even this.
+approvals:
+  mode: "off"
+  cron_mode: approve
