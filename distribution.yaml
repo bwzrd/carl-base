@@ -3,7 +3,7 @@ version: 0.1.0
 description: "Carl - pocket turf professional. Operations agent for golf course maintenance crews: job board, fuel/equipment/service logs, crew roster, scheduling. Talks over Telegram, stores everything in Airtable."
 hermes_requires: ">=0.14.0"
 author: "Brendan Wise"
-license: "Proprietary"
+license: "MIT"
 
 # Model access is NOT an env var - users log in with OAuth during setup:
 #   carl setup --portal        (Nous Portal - recommended)
