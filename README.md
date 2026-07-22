@@ -1,10 +1,20 @@
-# Carl — pocket turf professional
+# Carl — pocket turf professional (self-hosted)
 
 Operations agent for golf course maintenance crews, packaged as a
 [Hermes Agent](https://hermes-agent.nousresearch.com) profile distribution.
 Carl assigns crew jobs, logs fuel/equipment/service work, builds schedules, and
 answers turf questions — over Telegram, with everything stored in your Airtable
 base.
+
+> **Runs on your machine, on your own API key.** No account, no sign-up,
+> nothing metered, and no keys of ours bundled anywhere in this repo. Carl runs
+> with approvals off (see `config.yaml`) so he can work unattended for a crew
+> that isn't sitting at a terminal.
+>
+> **Don't want to run it yourself?** The hosted version —
+> [app.golfsoft.ca](https://app.golfsoft.ca) — is a full web app with accounts,
+> a dashboard, and irrigation automation, run and maintained for you
+> ([source](https://github.com/bwzrd/turf-claw)). Same Carl, different software.
 
 ## Install (2 minutes)
 
@@ -95,3 +105,7 @@ persona, and cron templates update.
   dashboard is single-operator only — don't share it with the crew.
 - Airtable 403s mean your token is missing scopes or base access, not that
   Carl is broken.
+
+## License
+
+[MIT](LICENSE) — do what you like with it.
